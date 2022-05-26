@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar javascript</title>
+  </head>
+  <body>
+    <button type="button" onclick="Klik()" name="button">jalankan</button>
+    <br>
+    <br>
+    <hr>
+    <b>Active element</b> property : <br>
+    <p id="copy">contoh</p>
+    <hr>
+    <b>addEventListener()</b> property : <br>
+    <p id="ngopi1">contoh</p>
+    <hr>
+    <b>anchor</b> property (<a name="jeruk" href="#">jeruk</a> <a name="semangka" href="#">semangka</a>) : <br>
+    <p id="anchor1">contoh</p>
+    <hr>
+
+    <script type="text/javascript">
+      function Klik(){
+        var a = document.activeElement.tagName;
+        document.getElementById("copy").innerHTML = a;
+
+        var b = document.addEventListener("click", function(){
+          document.getElementById("ngopi1").innerHTML = "sukses ! merubah addEventListener()"
+        });
+        var d = document.anchors.length;
+        document.getElementById("anchor1").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>
